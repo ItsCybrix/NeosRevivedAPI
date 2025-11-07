@@ -16,7 +16,7 @@ api.get('/api/sessions', (req, res)=>{
 })
 
 api.put('/api/sessions', (req, res)=>{
-    console.log("PUT /sessions " + req.body.data)
+    console.log("PUT /sessions " + req.body)
     res.send('OK');
 })
 
