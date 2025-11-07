@@ -1,7 +1,13 @@
 const express = require('express')
-
+const bodyParser = require('body-parser')
 
 const api = express()
+
+// parse application/x-www-form-urlencoded
+api.use(bodyParser.urlencoded())
+
+// parse application/json
+api.use(bodyParser.json())
 
 api.get('/api/stats/onlineUserStats',(req, res)=>{
     res.send('0');
@@ -9,6 +15,10 @@ api.get('/api/stats/onlineUserStats',(req, res)=>{
 
 api.get('/api/sessions', (req, res)=>{
     res.send([])
+})
+
+api.post('/api/stats/instanceOnline/:id',(req, res)=>{
+    console.log(req.body)
 })
 
 api.use((req, res, next)=>{
