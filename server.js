@@ -4,7 +4,7 @@ const express = require('express')
 const api = express()
 
 api.use((req, res, next)=>{
-    console.log(req.url);
+    console.log(req.method + " | " + req.url);
     res.send("OK")
 })
 
