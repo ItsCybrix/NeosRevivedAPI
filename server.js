@@ -19,6 +19,10 @@ api.post('/api/stats/instanceOnline/:id',(req, res)=>{
     console.log(req.body)
 })
 
+api.post('/api/neosSessions',(req, res)=>{
+    console.log(req.body)
+})
+
 api.use((req, res, next)=>{
     console.log("UNKNOW URL! " + req.method + " | " + req.url);
     res.send("OK")
