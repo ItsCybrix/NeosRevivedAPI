@@ -7,7 +7,7 @@ api.get('/api/stats/onlineUserStats',(req, res)=>{
     res.send('0');
 })
 
-api.get('/sessions', (req, res)=>{
+api.get('/api/sessions', (req, res)=>{
     res.send([])
 })
 
