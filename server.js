@@ -15,6 +15,11 @@ api.get('/api/sessions', (req, res)=>{
     res.send([])
 })
 
+api.put('/api/sessions', (req, res)=>{
+    console.log(req.body)
+    res.send('OK');
+})
+
 api.post('/api/stats/instanceOnline/:id',(req, res)=>{
     console.log(req.body)
 })
