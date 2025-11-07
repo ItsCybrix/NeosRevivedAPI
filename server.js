@@ -3,11 +3,9 @@ const bodyParser = require('body-parser')
 
 const api = express()
 
-// parse application/x-www-form-urlencoded
-api.use(bodyParser.urlencoded())
+api.use(bodyParser.urlencoded({ extended: true }));
+api.use(bodyParser.json());
 
-// parse application/json
-api.use(bodyParser.json())
 
 api.get('/api/stats/onlineUserStats',(req, res)=>{
     res.send('0');
