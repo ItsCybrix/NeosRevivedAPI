@@ -16,7 +16,7 @@ api.get('/api/sessions', (req, res)=>{
 })
 
 api.put('/api/sessions', (req, res)=>{
-    console.log("PUT /sessions " + req.body)
+    console.log("PUT /sessions " + req.body.data)
     res.send('OK');
 })
 
@@ -25,7 +25,7 @@ api.post('/api/stats/instanceOnline/:id',(req, res)=>{
 })
 
 api.post('/api/neosSessions',(req, res)=>{
-    console.log("POST /neosSessions " + req.body)
+    console.log("POST /neosSessions " + req.body.data)
     res.send("OK")
 })
 
