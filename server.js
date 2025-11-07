@@ -3,8 +3,12 @@ const express = require('express')
 
 const api = express()
 
+api.get('/api/stats/onlineUserStats',(req, res)=>{
+    res.send('0');
+})
+
 api.use((req, res, next)=>{
-    console.log(req.method + " | " + req.url);
+    console.log("UNKNOW URL! " + req.method + " | " + req.url);
     res.send("OK")
 })
 
